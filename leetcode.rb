@@ -16,3 +16,20 @@ end
 def interpret(command)
     command.gsub('()', 'o').gsub('(al)', 'al')
 end
+
+# 1431 Kids With the Greatest Number of Candies
+# Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
+# For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
+def kids_with_candies(candies, extra_candies)
+    max_candy = candies.max_by do |candy|
+        candy 
+    end
+    candies.map do |candy|
+       total = candy + extra_candies  
+        if total >= max_candy
+           true
+        else
+            false
+        end
+    end
+end
