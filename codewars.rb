@@ -3,3 +3,9 @@
 def XO(str)
   str.downcase.count('x') == str.downcase.count('o')
 end
+
+# Split in Parts 7kyu
+def split_in_parts (s, part_length)
+  split = s.chars.each_slice(part_length).map(&:join)
+  split.join(' ')
+end
