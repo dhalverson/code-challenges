@@ -16,3 +16,15 @@ end
 def filter_string(string)
   string.gsub(/['aA-zZ', ' ']/, '').to_i
 end
+
+
+# Lucky Number
+# Write a function to find if a number is lucky or not. If the sum of all digits is 0 or multiple of 9 then the number is lucky.
+def is_lucky(n)
+  sum = n.digits.reduce(0) { |acc, num| acc + num }
+    if sum == 0 || sum % 9 == 0
+      true
+    else
+      false
+    end
+end
