@@ -28,3 +28,18 @@ def is_lucky(n)
       false
     end
 end
+
+# Character Counter
+# You are going to be given a word. Your job will be to make sure that each character in that word has the exact same number of occurrences. You will return true if it is valid, or false if it is not.
+
+def validate_word(word)
+  chars = word.downcase.chars
+  result = chars.group_by do |char|
+      chars.count(char)
+  end
+  if result.keys.count == 1
+    true
+  else
+    false
+  end
+end
