@@ -43,3 +43,12 @@ def validate_word(word)
     false
   end
 end
+
+
+# Min Max
+# In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+def high_and_low(numbers)
+  sorted = numbers.split(' ').sort_by(&:to_i)
+  "#{sorted[-1]} #{sorted[0]}"
+end
