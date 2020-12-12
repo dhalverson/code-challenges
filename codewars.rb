@@ -52,3 +52,14 @@ def high_and_low(numbers)
   sorted = numbers.split(' ').sort_by(&:to_i)
   "#{sorted[-1]} #{sorted[0]}"
 end
+
+
+# Sum of positive
+# You get an array of numbers, return the sum of all of the positives ones.
+def positive_sum(arr)
+  result = 0
+  arr.each do |num|
+    result += num unless num < 0
+  end
+  result
+end
