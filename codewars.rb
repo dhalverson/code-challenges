@@ -63,3 +63,17 @@ def positive_sum(arr)
   end
   result
 end
+
+# Responsible Drinking
+# Codewars Bar recommends you drink 1 glass of water per standard drink so you're not hungover tomorrow morning.
+def hydrate(s)
+  total = 0
+  s.split(',').sum do |drink|
+   total += drink.to_i
+  end
+  if total == 1
+    "#{total} glass of water"
+  else
+    "#{total} glasses of water"
+  end
+end
