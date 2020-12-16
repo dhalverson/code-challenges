@@ -89,3 +89,10 @@ def to_time(seconds)
   minutes = (seconds / 60) % 60
   "#{hours} hour(s) and #{minutes} minute(s)"
 end
+
+# Shortest Word
+# Get length of shortest word in a string
+
+def find_short(s)
+   s.split.sort_by(&:length)[0].length
+end
