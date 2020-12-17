@@ -96,3 +96,9 @@ end
 def find_short(s)
    s.split.sort_by(&:length)[0].length
 end
+
+# Defangled IP Address
+# Replace . with [.]
+def defang_i_paddr(address)
+    address.gsub(".", "[.]")
+end
