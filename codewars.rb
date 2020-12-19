@@ -102,3 +102,8 @@ end
 def defang_i_paddr(address)
     address.gsub(".", "[.]")
 end
+
+# Reverse Sort
+def descending_order(n)
+  n.digits.sort.reverse.join.to_i
+end
