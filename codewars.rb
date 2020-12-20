@@ -107,3 +107,9 @@ end
 def descending_order(n)
   n.digits.sort.reverse.join.to_i
 end
+
+# Min numbers add
+def sum_two_smallest_numbers(numbers)
+  sorted = numbers.sort
+  sorted[0] + sorted[1]
+end
