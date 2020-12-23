@@ -118,3 +118,15 @@ end
 def stray(numbers)
   numbers.min_by {|n| numbers.count(n) }
 end
+
+# Two Oldest Ages
+def two_oldest_ages(ages)
+  ages = ages.sort
+  [ages[-2], ages[-1]]
+end
+
+or
+
+def two_oldest_ages(ages)
+  ages.sort.last(2)
+end
