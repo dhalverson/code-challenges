@@ -146,3 +146,13 @@ def solve(arr)
   
   result.compact
 end
+
+# Multiples of 2 numbers
+def multiples(s1, s2, s3)
+  numbers = (1..s3).to_a
+  results = []
+  numbers.each do |num|
+    results << num if num % s1 == 0 && num % s2 == 0
+  end
+  results
+end
