@@ -156,3 +156,10 @@ def multiples(s1, s2, s3)
   end
   results
 end
+
+
+# Return the missing element
+def get_missing_element(seq)
+  new_array = (0..9).to_a
+  (new_array - seq).first
+end
