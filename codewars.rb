@@ -163,3 +163,10 @@ def get_missing_element(seq)
   new_array = (0..9).to_a
   (new_array - seq).first
 end
+
+# Summy
+# Write a function that takes a string which has integers inside it separated by spaces, and your task is to convert each integer in the string into an integer and return their sum.
+
+def summy(string_of_ints)
+  string_of_ints.split(" ").map(&:to_i).sum
+end
