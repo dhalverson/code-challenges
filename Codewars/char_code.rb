@@ -14,7 +14,7 @@
 # -------------------------
 #                        6
 
-input_string = 'abc'
+input_string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def calc(input_string)
   result = []
