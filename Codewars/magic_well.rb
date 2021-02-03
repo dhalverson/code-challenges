@@ -19,7 +19,18 @@ def magical_well(a, b, n)
     b += 1
     counter += 1
   end
+  result.sum
+end
+
+def magical_well(a,b,n)
+  result = 0
+  n.times do
+    result += (a * b)
+    a += 1
+    b += 1
+  end
   result
 end
+
 
 print magical_well(a,b,c)
