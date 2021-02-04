@@ -21,23 +21,31 @@ str = ' gap '
 #   result
 # end
 
+# def wave(str)
+#   string_size = str.size
+#   counter = 0
+#   result = []
+#   until counter == str.str
+#     str.chars.each_with_index do |char, index|
+#       if char != ' '
+#         result << char unless index == counter
+#         result << char.capitalize if index == counter
+#       end
+#     end
+#     counter += 1
+#   end
+#   require 'pry'; binding.pry
+#   waves = result.each_slice(string_size).to_a
+#   waves.map do |wave|
+#     wave.join('')
+#   end
+# end
+
 def wave(str)
-  string_size = str.size
-  counter = 0
   result = []
-  until counter == str.str
-    str.chars.each_with_index do |char, index|
-      if char != ' '
-        result << char unless index == counter
-        result << char.capitalize if index == counter
-      end
-    end
-    counter += 1
-  end
-  require 'pry'; binding.pry
-  waves = result.each_slice(string_size).to_a
-  waves.map do |wave|
-    wave.join('')
+  str.chars.each_with_index do |char, index|
+    if char != ' '
+    require 'pry'; binding.pry
   end
 end
 
