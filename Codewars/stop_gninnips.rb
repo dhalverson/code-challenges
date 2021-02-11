@@ -2,10 +2,18 @@
 
 # Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
 
-word = 'Welcome'
+word = 'Hey fellow warriors'
 
 def spin_words(word)
-  word.reverse
+  result = []
+  word.split(' ').each do |word|
+    if word.length >= 5
+      result << word.reverse
+    else
+      result << word
+    end
+  end
+  result.join(' ')
 end
 
 print spin_words(word)
