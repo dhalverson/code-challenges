@@ -2,16 +2,17 @@
 
 def pig_it(pig_string)
   string_array = pig_string.split(' ')
-  result = []
-  sentence = ''
+  result = ''
   string_array.each do |word|
-    result << word.chars[1..-1]
-    result << word.chars[0]
-    result << 'ay '
-    sentence << result.flatten.join
+    result << word[1..-1]
+    result << word[0]
+    if word.match(/\w/)
+      result << 'ay '
+    end
   end
+  result
 end
 
 
 
-print pig_it('Pig latin is cool') # igPay atinlay siay oolcay
+print pig_it('Hello world !') # igPay atinlay siay oolcay
