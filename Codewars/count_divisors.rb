@@ -10,9 +10,9 @@
 
 def divisors(n)
   num_array = (1..n).to_a
-  num_array.map do |num|
+  num_array.select do |num|
     n % num == 0
-  end.count(true)
+  end.size
 end
 
 print divisors(10)
